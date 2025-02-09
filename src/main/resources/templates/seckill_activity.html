@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+	<title>Flash Sale System</title>
+	<link rel="icon" href="img/favicon.ico">
+
+	<!-- Include stylesheets -->
+	<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+	<link rel="stylesheet" type="text/css" href="css/all.css" />
+	<link rel="stylesheet" type="text/css" href="css/pages-seckill-index.css" />
+</head>
+
+<body>
+<!-- Header section -->
+<!-- Page top -->
+<div id="nav-bottom">
+	<!-- Top bar -->
+	<div class="nav-top">
+		<div class="top">
+			<div class="py-container">
+				<div class="shortcut">
+					<ul class="fl">
+						<li class="f-item">Welcome to Wish!</li>
+						<li class="f-item">Please
+							<a href="login.html" target="_blank">Log In</a>
+							<span>
+                                    <a href="register.html" target="_blank">Register</a>
+                                </span>
+						</li>
+					</ul>
+					<div class="fr typelist">
+						<ul class="types">
+							<li class="f-item">
+								<span>My Orders</span>
+							</li>
+							<li class="f-item">
+                                    <span>
+                                        <a href="cart.html" target="_blank">My Cart</a>
+                                    </span>
+							</li>
+							<li class="f-item">
+                                    <span>
+                                        <a href="home.html" target="_blank">Home</a>
+                                    </span>
+							</li>
+							<li class="f-item">
+								<span>Membership</span>
+							</li>
+
+							<li class="f-item">
+								<span>Follow</span>
+							</li>
+							<li class="f-item">
+                                    <span>
+                                        <a href="cooperation.html" target="_blank">Business Cooperation</a>
+                                    </span>
+							</li>
+							<li class="f-item">
+                                    <span>
+                                        <a href="shoplogin.html" target="_blank">Merchant Backend</a>
+                                    </span>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Header -->
+		<div class="header">
+			<div class="py-container">
+				<div class="yui3-g Logo">
+					<div class="yui3-u Left logoArea">
+						<a class="logo-bd" title="Jiuzhang" href="seckill_activity.html" target="_blank"></a>
+					</div>
+					<div class="yui3-u Rit searchArea">
+						<div class="search">
+							<form action="" class="sui-form form-inline">
+								<!--searchAutoComplete-->
+								<div class="input-append">
+									<input type="text" id="autocomplete" class="input-error input-xxlarge" />
+									<button class="sui-btn btn-xlarge btn-danger" type="button">Search</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="py-container index">
+	<!-- Banner -->
+	<div class="banner">
+		<img src="img/_/a9244c3727ef2bc10ed67948a0bdccd.png" class="img-responsive" alt="">
+	</div>
+	<!-- Flash sale times -->
+	<div class="sectime">
+		<div class="item-time active">
+			<div class="time-clock">12:00</div>
+			<div class="time-state-on">
+				<span class="on-text">Hurry, Grab Now</span>
+				<span class="on-over">Ends in: 01:02:34</span>
+			</div>
+		</div>
+		<div class="item-time">
+			<div class="time-clock">14:00</div>
+			<div class="time-state-will">
+				<span>Starting Soon</span>
+			</div>
+		</div>
+		<div class="item-time">
+			<div class="time-clock">16:00</div>
+			<div class="time-state-will">
+				<span>Starting Soon</span>
+			</div>
+		</div>
+		<div class="item-time">
+			<div class="time-clock">18:00</div>
+			<div class="time-state-will">
+				<span>Starting Soon</span>
+			</div>
+		</div>
+		<div class="item-time">
+			<div class="time-clock">20:00</div>
+			<div class="time-state-will">
+				<span>Starting Soon</span>
+			</div>
+		</div>
+	</div>
+	<!-- Flash sale items list -->
+	<div class="goods-list" id="app">
+		<ul class="seckill" id="seckill">
+			<tr th:each="seckillActivity : ${seckillActivities}">
+				<li class="seckill-item">
+					<div class="pic">
+						<img src="img/_/list.jpg" alt=''>
+					</div>
+					<div class="intro">
+						<span th:text="${seckillActivity.name}">Activity Name</span>
+					</div>
+					<div class='price'>
+						<b class='sec-price' th:text="'￥'+${seckillActivity.seckillPrice}"></b>
+						<b class='ever-price' th:text="'￥'+${seckillActivity.oldPrice}"></b>
+					</div>
+					<div class='num'>
+						<div>Sold 999</div>
+						<div class='progress'>
+							<div class='sui-progress progress-danger'>
+								<span style='width: 70%;' class='bar'></span>
+							</div>
+						</div>
+						<div>Remaining
+							<b class='owned'>999</b> items</div>
+					</div>
+					<a class='sui-btn btn-block btn-buy' th:href="@{'/item/'+${seckillActivity.id}}" target='_blank'>Buy Now</a>
+				</li>
+			</tr>
+		</ul>
+	</div>
+	<div class="cd-top">
+		<div class="top">
+			<img src="img/_/gotop.png" />
+			<b>TOP</b>
+		</div>
+		<div class="code" id="code">
+                <span>
+                    <img src="img/_/code.png" />
+                </span>
+		</div>
+		<div class="erweima">
+			<img src="img/_/erweima.jpg" alt="">
+			<s></s>
+		</div>
+	</div>
+</div>
+
+<!-- Footer section -->
+<div class="clearfix footer">
+	<div class="py-container">
+		<div class="footlink">
+			<div class="Mod-service">
+				<ul class="Mod-Service-list">
+					<li class="grid-service-item intro intro1">
+						<i class="serivce-item fl"></i>
+						<div class="service-text">
+							<h4>Genuine Products</h4>
+							<p>Guaranteed genuine, provides invoice</p>
+						</div>
+					</li>
+					<li class="grid-service-item intro intro2">
+						<i class="serivce-item fl"></i>
+						<div class="service-text">
+							<h4>Genuine Products</h4>
+							<p>Guaranteed genuine, provides invoice</p>
+						</div>
+					</li>
+					<li class="grid-service-item intro intro3">
+						<i class="serivce-item fl"></i>
+						<div class="service-text">
+							<h4>Genuine Products</h4>
+							<p>Guaranteed genuine, provides invoice</p>
+						</div>
+					</li>
+					<li class="grid-service-item intro intro4">
+						<i class="serivce-item fl"></i>
+						<div class="service-text">
+							<h4>Genuine Products</h4>
+							<p>Guaranteed genuine, provides invoice</p>
+						</div>
+					</li>
+					<li class="grid-service-item intro intro5">
+						<i class="serivce-item fl"></i>
+						<div class="service-text">
+							<h4>Genuine Products</h4>
+							<p>Guaranteed genuine, provides invoice</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="clearfix Mod-list">
+				<div class="yui3-g">
+					<div class="yui3-u-1-6">
+						<h4>Shopping Guide</h4>
+						<ul class="unstyled">
+							<li>Shopping Process</li>
+							<li>Member Introduction</li>
+							<li>Life Travel/Group Purchase</li>
+							<li>FAQ</li>
+							<li>Shopping Guide</li>
+						</ul>
+					</div>
+					<div class="yui3-u-1-6">
+						<h4>Delivery Methods</h4>
+						<ul class="unstyled">
+							<li>Pickup</li>
+							<li>211 Fast Delivery</li>
+							<li>Delivery Service Inquiry</li>
+							<li>Delivery Fee Standards</li>
+							<li>Overseas Delivery</li>
+						</ul>
+					</div>
+					<div class="yui3-u-1-6">
+						<h4>Payment Methods</h4>
+						<ul class="unstyled">
+							<li>Cash on Delivery</li>
+							<li>Online Payment</li>
+							<li>Installment Payment</li>
+							<li>Post Office Remittance</li>
+							<li>Bank Transfer</li>
+						</ul>
+					</div>
+					<div class="yui3-u-1-6">
+						<h4>After-sales Service</h4>
+						<ul class="unstyled">
+							<li>After-sales Policy</li>
+							<li>Price Protection</li>
+							<li>Refund Instructions</li>
+							<li>Repair/Return/Exchange</li>
+							<li>Order Cancellation</li>
+						</ul>
+					</div>
+					<div class="yui3-u-1-6">
+						<h4>Special Services</h4>
+						<ul class="unstyled">
+							<li>Auction Island</li>
+							<li>DIY Assembly</li>
+							<li>Extended Warranty</li>
+							<li>PinYouGou E-card</li>
+							<li>PinYouGou Communication</li>
+						</ul>
+					</div>
+					<div class="yui3-u-1-6">
+						<h4>Help Center</h4>
+						<img src="img/erwei_jz.png">
+					</div>
+				</div>
+			</div>
+			<div class="Mod-copyright">
+				<ul class="helpLink">
+					<li>About Us
+						<span class="space"></span>
+					</li>
+					<li>Contact Us
+						<span class="space"></span>
+					</li>
+					<li>About Us
+						<span class="space"></span>
+					</li>
+					<li>Merchant Sign-up
+						<span class="space"></span>
+					</li>
+					<li>Marketing Center
+						<span class="space"></span>
+					</li>
+					<li>Friendly Links
+						<span class="space"></span>
+					</li>
+					<li>About Us
+						<span class="space"></span>
+					</li>
+					<li>Marketing Center
+						<span class="space"></span>
+					</li>
+					<li>Friendly Links
+						<span class="space"></span>
+					</li>
+					<li>About Us</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End of page footer -->
+
+<!-- Include component libraries -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.8/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/element-ui/2.5.4/index.js"></script>
+<script>
+	new Vue({
+		el: '#app',
+		data() {
+			return {
+				goodslist: [{
+					intro: 'Apple iPhone 6s 32G Gold Unlocked Mobile',
+					newprice: '6088',
+					oldprice: '6988',
+					rate: '87%',
+					left: '29'
+				},
+					{
+						intro: 'Apple iPhone 6s 32G Gold Unlocked Mobile',
+						newprice: '6088',
+						oldprice: '6988',
+						rate: '87%',
+						left: '29'
+					},
+					{
+						intro: 'Apple iPhone 6s 32G Gold Unlocked Mobile',
+						newprice: '6088',
+						oldprice: '6988',
+						rate: '87%',
+						left: '29'
+					},
+					{
+						intro: 'Apple iPhone 6s 32G Gold Unlocked Mobile',
+						newprice: '6088',
+						oldprice: '6988',
+						rate: '87%',
+						left: '29'
+					},
+					{
+						intro: 'Apple iPhone 6s 32G Gold Unlocked Mobile',
+						newprice: '6088',
+						oldprice: '6988',
+						rate: '87%',
+						left: '29'
+					},
+					{
+						intro: 'Apple iPhone 6s 32G Gold Unlocked Mobile',
+						newprice: '6088',
+						oldprice: '6988',
+						rate: '87%',
+						left: '29'
+					},
+					{
+						intro: 'Apple iPhone 6s 32G Gold Unlocked Mobile',
+						newprice: '6088',
+						oldprice: '6988',
+						rate: '87%',
+						left: '29'
+					}
+				]
+			}
+		}
+	})
+</script>
+</body>
+
+</html>

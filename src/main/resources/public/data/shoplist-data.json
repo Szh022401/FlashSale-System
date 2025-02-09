@@ -1,0 +1,75 @@
+[
+    {
+        "img": "../../assets/img/seckill/shop/t.jpg",
+        "desc": "Apple1",
+        "cu":"满一件可参加超值换购",
+        "n-price": "139.00",
+        "o-price": "149.00",
+        "saled": "87%",
+        "leaved": "29"
+    },
+    {
+        "img": "../../assets/img/seckill/shop/t.jpg",
+        "desc": "Apple2",
+         "cu":"满一件可参加超值换购",
+        "n-price": "139.00",
+        "o-price": "5988",
+        "saled": "77%",
+        "leaved": "29"
+    },
+    {
+         "img": "../../assets/img/seckill/shop/t.jpg",
+        "desc": "Apple3",
+         "cu":"满一件可参加超值换购",
+        "n-price": "139.00",
+        "o-price": "5988",
+        "saled": "88%",
+        "leaved": "29"
+    },
+    {
+         "img": "../../assets/img/seckill/shop/t.jpg",
+        "desc": "Apple4",
+         "cu":"满一件可参加超值换购",
+        "n-price": "139.00",
+        "o-price": "5988",
+        "saled": "67%",
+        "leaved": "29"
+    },
+    {
+        "img": "../../assets/img/seckill/shop/t.jpg",
+        "desc": "Apple5",
+         "cu":"满一件可参加超值换购",
+        "n-price": "139.00",
+        "o-price": "8788",
+        "saled": "77%",
+        "leaved": "29"
+    },
+    {
+         "img": "../../assets/img/seckill/shop/t.jpg",
+        "desc": "Apple6",
+         "cu":"满一件可参加超值换购",
+        "n-price": "5788",
+        "o-price": "5988",
+        "saled": "88%",
+        "leaved": "29"
+    },
+    {
+         "img": "../../assets/img/seckill/shop/t.jpg",
+        "desc": "Apple7",
+         "cu":"满一件可参加超值换购",
+        "n-price": "3458",
+        "o-price": "5988",
+        "saled": "67%",
+        "leaved": "29"
+    },
+    {
+         "img": "../../assets/img/seckill/shop/t.jpg",
+        "desc": "Apple8",
+         "cu":"满一件可参加超值换购",
+        "n-price": "6788",
+        "o-price": "5988",
+        "saled": "67%",
+        "leaved": "29"
+    }
+    
+]

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/>
+    <title>Result page</title>
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/css/all.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/pages-getOrderInfo.css"/>
+</head>
+
+<body>
+<!--head-->
+<!-- 头部栏位 -->
+<!--页面顶部-->
+<div id="nav-bottom">
+    <!--顶部-->
+    <div class="nav-top">
+        <div class="top">
+            <div class="py-container">
+                <div class="shortcut">
+                    <ul class="fl">
+                        <li class="f-item"></li>
+                        <li class="f-item">Please <a href="login.html" target="_blank">登录</a>　<span><a href="register.html"
+                                                                                                 target="_blank">Register</a></span>
+                        </li>
+                    </ul>
+                    <div class="fr typelist">
+                        <ul class="types">
+                            <li class="f-item"><span>My Orders</span></li>
+                            <li class="f-item"><span><a href="cart.html" target="_blank">My Shopping Cart</a></span></li>
+                            <li class="f-item"><span><a href="cooperation.html" target="_blank">Cooperation & Merchants</a></span></li>
+                            <li class="f-item"><span><a href="shoplogin.html" target="_blank">Merchant Backend</a></span></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!--头部-->
+        <div class="header">
+            <div class="py-container">
+                <div class="yui3-g Logo">
+                    <div class="yui3-u Left logoArea">
+                        <a class="logo-bd" title="青橙" href="seckills.html" target="_blank"></a>
+                    </div>
+                    <div class="yui3-u Rit searchArea">
+                        <div class="search">
+                            <form action="" class="sui-form form-inline">
+                                <!--searchAutoComplete-->
+                                <div class="input-append">
+                                    <input type="text" id="autocomplete" class="input-error input-xxlarge"/>
+                                    <button class="sui-btn btn-xlarge btn-danger" type="button">Search</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="cart py-container" id="cart">
+    <div class="checkout py-container">
+        <div class="checkout-tit">
+            <h4 class="tit-txt">Result pag</h4>
+        </div>
+        <div class="checkout-steps">
+            <div class="hr"></div>
+            <!--支付和送货-->
+            <div class="payshipInfo">
+                <div class="hr"></div>
+                <div class="step-cont">
+                    <ul class="send-detail">
+                        <li>
+                            <div class="sendGoods">
+                                <em th:text="${resultInfo}"></em>
+                            </div>
+                        </li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="hr"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="submit">
+        <a class="sui-btn btn-danger btn-xlarge" th:href="@{'/seckill/orderQuery/'+ ${orderNo}}"
+           target='_blank'>Check Result</a>
+    </div>
+</div>
+
+<div class="clearfix footer">
+    <div class="py-container">
+        <div class="footlink">
+            <div class="Mod-service">
+                <ul class="Mod-Service-list">
+                    <li class="grid-service-item intro intro1">
+                        <i class="serivce-item fl"></i>
+                        <div class="service-text">
+                            <h4>Authenticity Guarantee</h4>
+                            <p>Guaranteed authentic, with invoice provided</p>
+                        </div>
+                    </li>
+                    <li class="grid-service-item intro intro2">
+                        <i class="serivce-item fl"></i>
+                        <div class="service-text">
+                            <h4>Authenticity Guarantee</h4>
+                            <p>Guaranteed authentic, with invoice provided</p>
+                        </div>
+                    </li>
+                    <li class="grid-service-item intro intro3">
+                        <i class="serivce-item fl"></i>
+                        <div class="service-text">
+                            <h4>Authenticity Guarantee</h4>
+                            <p>Guaranteed authentic, with invoice provided</p>
+                        </div>
+                    </li>
+                    <li class="grid-service-item intro intro4">
+                        <i class="serivce-item fl"></i>
+                        <div class="service-text">
+                            <h4>Authenticity Guarantee</h4>
+                            <p>Guaranteed authentic, with invoice provided</p>
+                        </div>
+                    </li>
+                    <li class="grid-service-item intro intro5">
+                        <i class="serivce-item fl"></i>
+                        <div class="service-text">
+                            <h4>Authenticity Guarantee</h4>
+                            <p>Guaranteed authentic, with invoice provided</p>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="clearfix Mod-list">
+                <div class="yui3-g">
+                    <div class="yui3-u-1-6">
+                        <h4>Shopping Guide</h4>
+                        <ul class="unstyled">
+                            <li>Shopping Process</li>
+                            <li>Membership Introduction</li>
+                            <li>Life Travel/Group Buying</li>
+                            <li>Frequently Asked Questions</li>
+                            <li>Shopping Guide</li>
+                        </ul>
+                    </div>
+                    <div class="yui3-u-1-6">
+                        <h4>Delivery Methods</h4>
+                        <ul class="unstyled">
+                            <li>Self-Pickup</li>
+                            <li>211 Time-Limited Delivery</li>
+                            <li>Delivery Service Inquiry</li>
+                            <li>Delivery Fee Standards</li>
+                            <li>Overseas Delivery</li>
+                        </ul>
+                    </div>
+                    <div class="yui3-u-1-6">
+                        <h4>Payment Methods</h4>
+                        <ul class="unstyled">
+                            <li>Cash on Delivery</li>
+                            <li>Online Payment</li>
+                            <li>Installment Payment</li>
+                            <li>Postal Remittance</li>
+                            <li>Company Transfer</li>
+                        </ul>
+                    </div>
+                    <div class="yui3-u-1-6">
+                        <h4>After-Sales Service</h4>
+                        <ul class="unstyled">
+                            <li>After-Sales Policy</li>
+                            <li>Price Protection</li>
+                            <li>Refund Instructions</li>
+                            <li>Repair/Return/Exchange</li>
+                            <li>Cancel Order</li>
+                        </ul>
+                    </div>
+                    <div class="yui3-u-1-6">
+                        <h4>Special Services</h4>
+                        <ul class="unstyled">
+                            <li>Treasure Island</li>
+                            <li>DIY PC Assembly</li>
+                            <li>Extended Warranty Service</li>
+                            <li>PinYouGou E-Card</li>
+                            <li>PinYouGou Telecom</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--页面底部END-->
+<script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
+
+<script src="/js/vue.js"></script>
+<script src="/js/axios.js"></script>
+</body>
+</html>

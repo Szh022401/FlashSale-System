@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+	<title>Checkout Page</title>
+	<link rel="icon" href="img/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/all.css" />
+	<link rel="stylesheet" type="text/css" href="/css/pages-getOrderInfo.css" />
+</head>
+
+<body>
+<!--head-->
+<!-- Header -->
+<!-- Page Top -->
+<div id="nav-bottom">
+	<!-- Top -->
+	<div class="nav-top">
+		<div class="top">
+			<div class="py-container">
+				<div class="shortcut">
+					<ul class="fl">
+						<li class="f-item"></li>
+						<li class="f-item">Please <a href="login.html" target="_blank">login</a>　<span><a href="register.html" target="_blank">Register</a></span></li>
+					</ul>
+					<div class="fr typelist">
+						<ul class="types">
+							<li class="f-item"><span>My Orders</span></li>
+							<li class="f-item"><span><a href="cart.html" target="_blank">My Cart</a></span></li>
+							<li class="f-item"><span>Corporate Procurement</span></li>
+							<li class="f-item"><span><a href="cooperation.html" target="_blank">Business Cooperation</a></span></li>
+							<li class="f-item"><span><a href="shoplogin.html" target="_blank">Merchant Portal</a></span></li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Header -->
+		<div class="header">
+			<div class="py-container">
+				<div class="yui3-g Logo">
+					<div class="yui3-u Left logoArea">
+						<a class="logo-bd" title="Qingcheng" href="seckills.html" target="_blank"></a>
+					</div>
+					<div class="yui3-u Rit searchArea">
+						<div class="search">
+							<form action="" class="sui-form form-inline">
+								<!--searchAutoComplete-->
+								<div class="input-append">
+									<input type="text" id="autocomplete" class="input-error input-xxlarge" />
+									<button class="sui-btn btn-xlarge btn-danger" type="button">Search</button>
+								</div>
+							</form>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="cart py-container" id="cart">
+	<!-- Main Content -->
+	<div class="checkout py-container">
+		<div class="checkout-tit">
+			<h4 class="tit-txt">Order Information</h4>
+		</div>
+		<div class="checkout-steps">
+			<div class="hr"></div>
+			<!-- Payment and Delivery -->
+			<div class="payshipInfo">
+				<div class="step-tit">
+					<h5>Payment Method</h5>
+				</div>
+				<div class="step-cont">
+					<ul class="payType">
+						<li class="selected" @click="order.payType='1'">Online Payment<span title="Click to cancel selection"></span></li>
+						<li @click="order.payType='0'">Cash on Delivery<span title="Click to cancel selection"></span></li>
+					</ul>
+				</div>
+				<div class="hr"></div>
+				<div class="step-cont">
+					<ul class="send-detail">
+						<li>
+							<div class="sendGoods">
+								<span>Order Number:</span><em th:text="${order.orderNo}"></em>
+							</div>
+							<div class="sendGoods">
+								<span>Order Status:</span>
+								<em th:switch="${order.orderStatus}">
+									<span th:case="0">No available stock</span>
+									<span th:case="1">Created, awaiting payment</span>
+									<span th:case="2">Paid, awaiting shipment</span>
+									<span th:case="99">Order closed, payment timeout</span>
+								</em>
+							</div>
+							<div class="sendGoods">
+								<span>Flash Sale Information:</span><em th:text="${seckillActivity.name}"></em>
+							</div>
+							<div class="sendGoods">
+								<span>Order Creation Time:</span><em th:text="${#dates.format(order.createTime,'yyyy-MM-dd HH:mm:ss')}"></em>
+							</div>
+						</li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+				<div class="hr"></div>
+			</div>
+		</div>
+	</div>
+	<div class="clearfix trade">
+		<div class="fc-price">Order Total: <span class="price"></span></div>
+		<em th:text="'￥'+${order.orderAmount}"></em>
+	</div>
+
+	<em th:switch="${order.orderStatus}">
+		<span th:case="1">
+			<div class="submit">
+				<a class="sui-btn btn-danger btn-xlarge" th:href="@{'/seckill/payOrder/' + ${order.orderNo}}">Pay Order</a>
+			</div>
+		</span>
+	</em>
+</div>
+<!-- Footer -->
+<div class="clearfix footer">
+	<div class="py-container">
+		<div class="footlink">
+			<div class="Mod-service">
+				<ul class="Mod-Service-list">
+					<li class="grid-service-item intro intro1">
+						<i class="serivce-item fl"></i>
+						<div class="service-text">
+							<h4>Genuine Guarantee</h4>
+							<p>Genuine guarantee, provide invoice</p>
+						</div>
+					</li>
+					<li class="grid-service-item intro intro2">
+						<i class="serivce-item fl"></i>
+						<div class="service-text">
+							<h4>Genuine Guarantee</h4>
+							<p>Genuine guarantee, provide invoice</p>
+						</div>
+					</li>
+					<li class="grid-service-item intro intro3">
+						<i class="serivce-item fl"></i>
+						<div class="service-text">
+							<h4>Genuine Guarantee</h4>
+							<p>Genuine guarantee, provide invoice</p>
+						</div>
+					</li>
+					<li class="grid-service-item intro intro4">
+						<i class="serivce-item fl"></i>
+						<div class="service-text">
+							<h4>Genuine Guarantee</h4>
+							<p>Genuine guarantee, provide invoice</p>
+						</div>
+					</li>
+					<li class="grid-service-item intro intro5">
+						<i class="serivce-item fl"></i>
+						<div class="service-text">
+							<h4>Genuine Guarantee</h4>
+							<p>Genuine guarantee, provide invoice</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="clearfix Mod-list">
+				<div class="yui3-g">
+					<div class="yui3-u-1-6">
+						<h4>Shopping Guide</h4>
+						<ul class="unstyled">
+							<li>Shopping Process</li>
+							<li>Member Introduction</li>
+							<li>Life and Travel/Tuan</li>
+							<li>FAQ</li>
+							<li>Shopping Guide</li>
+						</ul>
+					</div>
+					<div class="yui3-u-1-6">
+						<h4>Delivery Methods</h4>
+						<ul class="unstyled">
+							<li>Pick-up Service</li>
+							<li>211 Time-limited Delivery</li>
+							<li>Delivery Service Inquiry</li>
+							<li>Delivery Fee Standard</li>
+							<li>Overseas Delivery</li>
+						</ul>
+					</div>
+					<div class="yui3-u-1-6">
+						<h4>Payment Methods</h4>
+						<ul class="unstyled">
+							<li>Cash on Delivery</li>
+							<li>Online Payment</li>
+							<li>Installment Payment</li>
+							<li>Postal Remittance</li>
+							<li>Company Transfer</li>
+						</ul>
+					</div>
+					<div class="yui3-u-1-6">
+						<h4>After-sales Service</h4>
+						<ul class="unstyled">
+							<li>After-sales Policy</li>
+							<li>Price Protection</li>
+							<li>Refund Instructions</li>
+							<li>Repair/Return/Exchange</li>
+							<li>Order Cancellation</li>
+						</ul>
+					</div>
+					<div class="yui3-u-1-6">
+						<h4>Special Services</h4>
+						<ul class="unstyled">
+							<li>Treasure Island</li>
+							<li>DIY Assembly</li>
+							<li>Extended Warranty</li>
+							<li>PinYouGou E-Card</li>
+							<li>PinYouGou Communication</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Footer End -->
+<script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
+<script src="/js/vue.js"></script>
+<script src="/js/axios.js"></script>
+</body>
+</html>

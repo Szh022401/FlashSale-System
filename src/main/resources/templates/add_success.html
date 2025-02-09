@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+  <title>Flash Sale</title>
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="/css/all.css" />
+  <link rel="stylesheet" type="text/css" href="/css/pages-getOrderInfo.css" />
+</head>
+
+<body>
+<!-- Head -->
+<!-- Top Bar -->
+<!-- Page Header -->
+<div id="nav-bottom">
+  <!-- Top -->
+  <div class="nav-top">
+    <div class="top">
+      <div class="py-container">
+        <div class="shortcut">
+          <ul class="fl">
+            <li class="f-item"></li>
+            <li class="f-item">Please <a href="login.html" target="_blank">login</a>　<span><a href="register.html" target="_blank">Register</a></span></li>
+          </ul>
+          <div class="fr typelist">
+            <ul class="types">
+              <li class="f-item"><span>My Orders</span></li>
+              <li class="f-item"><span><a href="cart.html" target="_blank">My Cart</a></span></li>
+              <li class="f-item"><span><a href="cooperation.html" target="_blank">Cooperation & Merchants</a></span></li>
+
+
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+      <div class="py-container">
+        <div class="yui3-g Logo">
+          <div class="yui3-u Left logoArea">
+            <a class="logo-bd" title="Green Orange" href="seckills.html" target="_blank"></a>
+          </div>
+          <div class="yui3-u Rit searchArea">
+            <div class="search">
+              <form action="" class="sui-form form-inline">
+                <!--searchAutoComplete-->
+                <div class="input-append">
+                  <input type="text" id="autocomplete" class="input-error input-xxlarge" />
+                  <button class="sui-btn btn-xlarge btn-danger" type="button">Search</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cart py-container" id="cart">
+  <!-- Main Content -->
+  <div class="checkout py-container">
+    <div class="checkout-tit">
+      <h4 class="tit-txt">Add New Flash Sale Event</h4>
+    </div>
+    <div class="checkout-steps">
+      <div class="hr"></div>
+      <div class="payshipInfo">
+        <div class="hr"></div>
+        <div class="step-cont">
+          <ul class="send-detail">
+            <style>
+              .dialog-card {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+              }
+
+              .dialog-card>p {
+                display: flex;
+                flex-direction: row;
+                min-width: 10rem;
+              }
+
+              .dialog-card>p>span {
+                flex-grow: 1;
+                text-align: center;
+              }
+            </style>
+            <div class="dialog-card">
+              <h1>Flash Sale Event Added Successfully</h1>
+              <p>Event Name: <span th:text="${seckillActivity.name}"></span></p>
+              <p>Original Price: <span th:text="${seckillActivity.oldPrice}"></span></p>
+              <p>Flash Sale Price: <span th:text="${seckillActivity.seckillPrice}"></span></p>
+              <p>Stock Quantity: <span th:text="${seckillActivity.availableStock}"></span></p>
+            </div>
+          </ul>
+        </div>
+        <div class="hr"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<!-- Page Footer -->
+<div class="clearfix footer">
+  <div class="py-container">
+    <div class="footlink">
+      <div class="Mod-service">
+        <ul class="Mod-Service-list">
+          <li class="grid-service-item intro intro1">
+
+            <i class="serivce-item fl"></i>
+            <div class="service-text">
+              <h4>Authenticity Guarantee</h4>
+              <p>Guaranteed authentic, invoice provided</p>
+            </div>
+
+          </li>
+          <li class="grid-service-item intro intro2">
+
+            <i class="serivce-item fl"></i>
+            <div class="service-text">
+              <h4>Authenticity Guarantee</h4>
+              <p>Guaranteed authentic, invoice provided</p>
+            </div>
+
+          </li>
+          <li class="grid-service-item intro intro3">
+
+            <i class="serivce-item fl"></i>
+            <div class="service-text">
+              <h4>Authenticity Guarantee</h4>
+              <p>Guaranteed authentic, invoice provided</p>
+            </div>
+
+          </li>
+          <li class="grid-service-item intro intro4">
+
+            <i class="serivce-item fl"></i>
+            <div class="service-text">
+              <h4>Authenticity Guarantee</h4>
+              <p>Guaranteed authentic, invoice provided</p>
+            </div>
+
+          </li>
+          <li class="grid-service-item intro intro5">
+
+            <i class="serivce-item fl"></i>
+            <div class="service-text">
+              <h4>Authenticity Guarantee</h4>
+              <p>Guaranteed authentic, invoice provided</p>
+            </div>
+
+          </li>
+        </ul>
+      </div>
+      <div class="clearfix Mod-list">
+        <div class="yui3-g">
+          <div class="yui3-u-1-6">
+            <h4>Shopping Guide</h4>
+            <ul class="unstyled">
+              <li>Shopping Process</li>
+              <li>Membership Introduction</li>
+              <li>Life Travel/Group Buying</li>
+              <li>Frequently Asked Questions</li>
+              <li>Shopping Guide</li>
+            </ul>
+
+          </div>
+          <div class="yui3-u-1-6">
+            <h4>Delivery Methods</h4>
+            <ul class="unstyled">
+              <li>Self Pickup</li>
+              <li>211 Timed Delivery</li>
+              <li>Delivery Service Inquiry</li>
+              <li>Delivery Fee Standards</li>
+              <li>Overseas Delivery</li>
+            </ul>
+          </div>
+          <div class="yui3-u-1-6">
+            <h4>Payment Methods</h4>
+            <ul class="unstyled">
+              <li>Cash on Delivery</li>
+              <li>Online Payment</li>
+              <li>Installment Payment</li>
+              <li>Postal Remittance</li>
+              <li>Company Transfer</li>
+            </ul>
+          </div>
+          <div class="yui3-u-1-6">
+            <h4>After-Sales Service</h4>
+            <ul class="unstyled">
+              <li>After-Sales Policy</li>
+              <li>Price Protection</li>
+              <li>Refund Instructions</li>
+              <li>Repair/Return/Exchange</li>
+              <li>Order Cancellation</li>
+            </ul>
+          </div>
+          <div class="yui3-u-1-6">
+            <h4>Special Services</h4>
+            <ul class="unstyled">
+              <li>Treasure Island</li>
+              <li>DIY PC Assembly</li>
+              <li>Extended Warranty</li>
+              <li>PinYouGou E-Card</li>
+              <li>PinYouGou Telecom</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End of Footer -->
+<script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
+
+<script src="/js/vue.js"></script>
+<script src="/js/axios.js"></script>
+</body>
+
+</html>
