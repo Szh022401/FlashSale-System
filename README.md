@@ -76,7 +76,7 @@ This is a high-performance Flash Sale System that efficiently handles high-concu
 
 ## Tech Stack
 - **Backend**: Spring Boot, RocketMQ, Redis, MySQL
-- **Frontend**: (If applicable, add details)
+- **Frontend**: (JavaScript,HTML,CSS)
 - **Build Tool**: Maven
 
 
